@@ -1,0 +1,41 @@
+USE [master]
+CREATE DATABASE AcademyDB
+
+USE AcademyDB
+CREATE TABLE Departments 
+(
+    Id int Identity(1,1) NOT NULL Primary Key,
+	Financing money NOT NULL Default 0 Check (Financing >= 0),
+	[Name] nvarchar(100) NOT NULL Default 'None' UNIQUE,
+)
+
+
+CREATE TABLE Faculties 
+(
+    Id int Identity NOT NULL Primary Key,
+	Dean nvarchar(MAX) NOT NULL Default 'None',
+	[Name] nvarchar(100) NOT NULL Default 'None' UNIQUE,
+)
+
+
+CREATE TABLE Groups
+(
+   Id int Identity NOT NUll Primary KEY,
+   [Name] nvarchar(10) NOT NULL Default 'None' UNIQUE,
+   Rating int NOT NULL Check (Rating >=0 AND Rating <= 5),
+   [Year] int NOT NULL Check ([Year] >=0 AND [Year] <= 5),
+)
+
+
+CREATE TABLE Teachers
+(
+	Id int Identity NOT NUll Primary KEY,
+	EmploymentDate DATE NOT NUll CHECK (EmploymentDate >= '01-01-1990'),
+	IsAssistant bit NOT NUll DEFAULT 0,
+	IsProfessor bit NOT NUll DEFAULT 0,
+	[Name] nvarchar(MAX) NOT NULL Default 'None',
+	Position nvarchar(MAX) NOT NULL Default 'None',
+	Premium money NOT NULL Default 0 Check (Premium >= 0),
+	Salary money NOT NULL  Check (Salary > 0),
+	Surname nvarchar(MAX) NOT NULL Default 'None',
+)
