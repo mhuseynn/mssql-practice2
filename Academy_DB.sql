@@ -455,8 +455,8 @@ insert into Teachers (EmploymentDate, IsAssistant, IsProfessor, Name, Position, 
 /*
 Tasks
 1. Print departments table but arrange its fields in the reverse order.
-2. Print group names and their ratings using “Group Name”
-and “Group Rating”, respectively, as names of the fields.
+2. Print group names and their ratings using Â“Group NameÂ”
+and Â“Group RatingÂ”, respectively, as names of the fields.
 3. Print for the teachers their surname, percentage of wage rate
 to premium ratio and percentage of wage rate to the salary ratio
 (the amount of wage rate and premium).
@@ -482,6 +482,7 @@ rate and premium) is not more than 1200.
 from 2 to 4.
 15.Print names of assistants whose wage rate is less than 550 or
 premium is less than 200.
+----
 */
 
 -----1. Print departments table but arrange its fields in the reverse order.
@@ -490,8 +491,8 @@ SELECT [Name],Financing,Id FROM Departments
 
 ----------------------------------------------------------------------------------------
 
-/*2. Print group names and their ratings using “Group Name”
-and “Group Rating”, respectively, as names of the fields.*/
+/*2. Print group names and their ratings using Â“Group NameÂ”
+and Â“Group RatingÂ”, respectively, as names of the fields.*/
 SELECT [Name] as 'Group Name',Rating as 'Group Rating' FROM	Groups
 
 ----------------------------------------------------------------------------------------
